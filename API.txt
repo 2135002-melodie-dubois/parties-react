@@ -1,0 +1,23 @@
+API
+Joueur: A un identifiant et un surnom(optionnel)
+Cause Mort: a une cause et une description(optionnel)
+Ennemi:A un nom, on sait s'il est aggrresif, si le joueur a gangé, combie de points il vaut
+
+Partie: Contient: -le nom du joueur
+                -le nombre de cases completees
+                -la date ou la partie a eu lieu
+                -une liste des ennemis rencontrés
+                -le score final du joueur
+                -si la partie est valide
+                -la raison si elle est invalide, si applicable
+
+FONCTIONS
+-GET /parties: Récupere toutes les parties valides
+-GET /parties/joueur/{joueur}: Récupere toutes les parties valides pour un joueur
+-GET /parties/mort/{mort}: Récupere toutes les partie valides pour une cause de mort
+-GET /parties/score: Récupere toutes les parties par ordre de score
+-GET /parties/invalide : Récupere toutes les partie invalides
+-POST /parties : Ajoute une nouvelle partie
+-POST /parties/invalider/{id} : Rend une partie invalide
+-POST /parties/valider/{id} : Rend une partie valide
+-DELETE /parties :Supprime une partie
